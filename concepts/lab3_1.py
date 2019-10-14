@@ -12,7 +12,7 @@ def sums():
 
 def string_manip(first_name):
 
-   	name = "first_name" 
+   	name = "your_name_here" 
 
    	all_caps = name.upper()
 
