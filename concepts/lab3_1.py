@@ -1,7 +1,7 @@
 def sums():
    
   	
-	first_sum = 2+2
+	first_sum = 2 + 2
 
 	first_sum = first_sum * 10
 
@@ -12,7 +12,7 @@ def sums():
 
 def string_manip(first_name):
 
-   	name = "your_name_here" 
+   	name = first_name
 
    	all_caps = name.upper()
 
@@ -51,7 +51,7 @@ def equitable_bill_splitter():
    # TODO: Read the following code and add comments to each line explaining what
    # it does. To write a comment, begin the line with an octothorpe (hashtag, #)
    
-   # this will give you a prompt to enter an interger that will equal the number of people
+   # this will give you a prompt to enter an interger that will store the number in variable people
    people = int(input("How many people are paying? "))
    # this will create a array that can store multiple values
    salaries = []
