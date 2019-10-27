@@ -75,16 +75,7 @@ def guessing_game(num):
 	mode = input ()
 	   if mode == 'q':
 	      print("Goodbye, quitter!")
-  
-   # You should give your user at most 10 guesses to guess
-   # the number. If the guess is too high or too low, you should tell 
-   # them "Too High!" or "Too Low!" with the print statement.
-   # If they guess the number, you should tell them "You win!"
-   # otherwise, if they run out of guesses, tell them, "You lose!"
-   # If they want to, your condition should also check for "q" and 
-   # if the user enters that the program should exit, saying 
-   # "Goodbye, quitter!"
-   # No, it's not a very nice program. 
+   
 
 
    # So the tests fail and they don't throw errors
