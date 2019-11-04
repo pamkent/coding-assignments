@@ -19,7 +19,7 @@ def compare_it(x, y):
 def keyword_counter(a, b, c):
    fhand = open('test6_1.txt')
    counts = dict()
-   names = ['apple', 'banana', 'grapefruit']
+   names = [keyword]
    for names in fhand:
       counts[name] = counts.get(name, 0) + 1 
    print(counts)   
