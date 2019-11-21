@@ -4,17 +4,16 @@
  
 import requests 
 
-def verification(domain):
+def verification(url):
 
-   domains = re.findall("com$, net$, edu$, gov$", str)
-   for domain in domains:
-      return domain 
+   ulrs = re.findall("com$, net$, edu$, gov$", str)
+   if url in urls:
+      return url
    else: 
       return None  
  
 def basic_request(url):
 
-   sc = ""
    out = verification(url)
    print (out) 
    if out == "none":
@@ -25,16 +24,16 @@ def basic_request(url):
 
 def request_user_agent(url, user):
 
-   results = domain(url)
-   if results:
+   results = verification(url)
+   if results.get(url):
       if isinstance(user, str):
-         return results 
-      else:
-         return None
+         return results.get(url, headers={'user-agent': user_agent}) 
+   else:
+      return None 
 
 def request_post(url, dictionary):
 
-   results = domain(url)
+   results = verification(url)
    if results:
       if isinstance(dictionary, dict) or dictionary != {}:
          results = requests.post(url)
