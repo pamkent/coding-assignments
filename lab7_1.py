@@ -27,7 +27,7 @@ def request_user_agent(url, user):
    if not isinstance(user, str):
       return None
       
-   response = results.get(url, headers={'user-agent': user_agent}) 
+   response = requests.get(url, headers={'user-agent': user_agent}) 
    return response.txt    
 
 def request_post(url, dictionary):
