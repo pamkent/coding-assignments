@@ -6,7 +6,7 @@ import requests
 
 def verification(url):
 
-   ulrs = ["com", "net", "edu", "gov"]
+   urls = ["com", "net", "edu", "gov"]
    if url[-4:] in urls:
       return url
    else: 
@@ -16,11 +16,10 @@ def basic_request(url):
 
    out = verification(url)
    print (out) 
-   if out == "none":
+   if verification(url) == None:
       return None
-   else:
-      sc = requests.get(url)
-      return sc.status_code    
+   sc = requests.get(url)
+   return sc.status_code    
 
 def request_user_agent(url, user):
 
