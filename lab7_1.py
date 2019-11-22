@@ -9,8 +9,7 @@ def verification(url):
    urls = ["com", "net", "edu", "gov"]
    if url[-4:] in urls:
       return url
-   else: 
-      return None  
+   return None  
  
 def basic_request(url):
 
@@ -23,20 +22,22 @@ def basic_request(url):
 
 def request_user_agent(url, user):
 
-   results = verification(url)
-   if results.get(url):
-      if isinstance(user, str):
-         return results.get(url, headers={'user-agent': user_agent}) 
-   else:
-      return None 
+   if verification(url) == None
+      return None
+   if not isinstance(user, str):
+      return None
+      
+   response = results.get(url, headers={'user-agent': user_agent}) 
+   return response.txt    
 
 def request_post(url, dictionary):
 
-   results = verification(url)
-   if results:
-      if isinstance(dictionary, dict) or dictionary != {}:
-         results = requests.post(url)
-         return results 
-   else:
-      return None                  
+   if verification(url) == None:
+      return None
+   if data == None or data == {} or not isinstance(data, dict):
+      return None      
+         
+   response = requests.post(url + "/post", data=data)
+   return response.txt
+                
     
