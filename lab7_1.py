@@ -6,8 +6,8 @@ import requests
 
 def verification(url):
 
-   ulrs = re.findall("com$, net$, edu$, gov$", str)
-   if url in urls:
+   ulrs = ["com", "net", "edu", "gov"]
+   if url[-4:] in urls:
       return url
    else: 
       return None  
@@ -20,7 +20,7 @@ def basic_request(url):
       return None
    else:
       sc = requests.get(url)
-      return sc     
+      return sc.status_code    
 
 def request_user_agent(url, user):
 
