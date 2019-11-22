@@ -27,17 +27,17 @@ def request_user_agent(url, user):
    if not isinstance(user, str):
       return None
       
-   response = requests.get(url, headers={'user-agent': user_agent}) 
-   return response.txt    
+   resp = requests.get(url, headers={'user-agent': user}) 
+   return resp.txt    
 
-def request_post(url, dictionary):
+def request_post(url, data):
 
    if verification(url) == None:
       return None
    if data == None or data == {} or not isinstance(data, dict):
       return None      
          
-   response = requests.post(url + "/post", data=data)
-   return response.txt
+   resp = requests.post(url + "/post", data=data)
+   return resp.txt
                 
     
