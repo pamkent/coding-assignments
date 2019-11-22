@@ -22,7 +22,7 @@ def basic_request(url):
 
 def request_user_agent(url, user):
 
-   if verification(url) == None
+   if verification(url) == None:
       return None
    if not isinstance(user, str):
       return None
