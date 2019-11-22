@@ -7,7 +7,7 @@ import requests
 def verification(url):
 
    urls = ["com", "net", "edu", "gov"]
-   if url[-4:] in urls:
+   if url[-3:] in urls:
       return url
    return None  
  
